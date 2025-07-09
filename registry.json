@@ -75,6 +75,19 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "add-button",
+      "type": "registry:component",
+      "title": "Add Button",
+      "description": "A button that adds a new item.",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/add-button/add-button.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
