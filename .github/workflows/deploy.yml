@@ -13,7 +13,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'pages'
+  group: "pages"
   cancel-in-progress: false
 
 jobs:
@@ -33,7 +33,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm'
+          cache: "pnpm"
 
       - name: Install dependencies
         run: pnpm install
@@ -45,7 +45,9 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_URL: https://nana-software-llc.github.io/yo-ui
           NEXT_PUBLIC_BASE_PATH: /yo-ui
-        run: pnpm run build
+        run: |
+          pnpm run build
+          pnpm run registry:build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -53,7 +55,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './out'
+          path: "./out"
 
   deploy:
     environment:
