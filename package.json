@@ -8,9 +8,10 @@
     "build": "pnpm clean && pnpm registry:build && next build",
     "start": "next start",
     "lint": "next lint",
-    "registry:build": "shadcn build",
+    "registry:build": "shadcn build && pnpm replace-urls",
     "sb": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "replace-urls": "node scripts/replace-urls.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",

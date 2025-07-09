@@ -5,12 +5,13 @@
   "title": "Add Button",
   "description": "A button that adds a new item.",
   "registryDependencies": [
-    "button"
+    "button",
+    "http://localhost:3000/r/use-translation.json"
   ],
   "files": [
     {
       "path": "registry/new-york/blocks/add-button/add-button.tsx",
-      "content": "import { Button } from \"@/registry/new-york/ui/button\";\n\nexport function AddButton(props: React.ComponentProps<\"button\">) {\n  return <Button {...props}>Add new</Button>;\n}\n",
+      "content": "import { Button } from \"@/registry/new-york/ui/button\";\nimport { useTranslation } from \"@/registry/new-york/hooks/use-translation\";\n\nexport function AddButton(props: React.ComponentProps<\"button\">) {\n  const t = useTranslation();\n  return <Button {...props}>{t(\"button.add\", \"Add new\")}</Button>;\n}\n",
       "type": "registry:component"
     }
   ]

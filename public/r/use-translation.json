@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "use-translation",
+  "type": "registry:hook",
+  "title": "Use Translation",
+  "description": "A hook that provides translation functionality.",
+  "files": [
+    {
+      "path": "registry/new-york/hooks/use-translation.ts",
+      "content": "/**\n * Replace with your own translation function\n *\n * @param namespace\n * @returns\n */\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\nexport function useTranslation(namespace: string = \"translation\") {\n  return (\n    key: string,\n    options:\n      | {\n          defaultMessage: string;\n          [key: string]: string | number | undefined;\n        }\n      | string\n  ) => {\n    return typeof options === \"string\"\n      ? options\n      : options?.defaultMessage || key;\n  };\n}\n",
+      "type": "registry:hook"
+    }
+  ]
+}

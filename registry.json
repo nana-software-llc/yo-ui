@@ -81,11 +81,26 @@
       "type": "registry:component",
       "title": "Add Button",
       "description": "A button that adds a new item.",
-      "registryDependencies": ["button"],
+      "registryDependencies": [
+        "button",
+        "NEXT_PUBLIC_BASE_URL/r/use-translation.json"
+      ],
       "files": [
         {
           "path": "registry/new-york/blocks/add-button/add-button.tsx",
           "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "use-translation",
+      "type": "registry:hook",
+      "title": "Use Translation",
+      "description": "A hook that provides translation functionality.",
+      "files": [
+        {
+          "path": "registry/new-york/hooks/use-translation.ts",
+          "type": "registry:hook"
         }
       ]
     }
