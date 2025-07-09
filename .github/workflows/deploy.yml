@@ -43,7 +43,7 @@ jobs:
 
       - name: Build static site
         env:
-          NEXT_PUBLIC_BASE_URL: https://doiya46.github.io/mi-registry-template-v4
+          NEXT_PUBLIC_BASE_URL: https://nana-software-llc.github.io/yo-ui
         run: pnpm run build
 
       - name: Setup Pages
