@@ -97,6 +97,66 @@
       }
     },
     {
+      "name": "edit-button",
+      "type": "registry:component",
+      "title": "Edit Button",
+      "description": "A button that edits an item.",
+      "registryDependencies": [
+        "button",
+        "NEXT_PUBLIC_BASE_URL/r/use-translation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/components/edit-button.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["button"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "delete-button",
+      "type": "registry:component",
+      "title": "Delete Button",
+      "description": "A button that deletes an item.",
+      "registryDependencies": [
+        "button",
+        "NEXT_PUBLIC_BASE_URL/r/use-translation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/components/delete-button.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["button"],
+        "colSpan": 3
+      }
+    },
+    {
+      "name": "edit-button-icon",
+      "type": "registry:component",
+      "title": "Edit Button Icon",
+      "description": "A button that edits an item with an icon.",
+      "registryDependencies": [
+        "button",
+        "NEXT_PUBLIC_BASE_URL/r/use-translation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/components/edit-button-icon.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["button"],
+        "colSpan": 3
+      }
+    },
+    {
       "name": "use-translation",
       "type": "registry:hook",
       "title": "Use Translation",

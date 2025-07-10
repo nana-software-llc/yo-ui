@@ -61,6 +61,7 @@ export default function ComponentDetails({
 
         const data = await response.json();
         const codeContent = convertRegistryPaths(data.files[0].content) || "";
+        console.log(codeContent, "codeContent");
         setCode(codeContent);
 
         // Pre-highlight the code
