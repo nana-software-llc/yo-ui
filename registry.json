@@ -87,10 +87,14 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/add-button/add-button.tsx",
+          "path": "registry/new-york/components/add-button.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "meta": {
+        "tags": ["button"],
+        "colSpan": 3
+      }
     },
     {
       "name": "use-translation",

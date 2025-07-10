@@ -10,9 +10,15 @@
   ],
   "files": [
     {
-      "path": "registry/new-york/blocks/add-button/add-button.tsx",
+      "path": "registry/new-york/components/add-button.tsx",
       "content": "import { Button } from \"@/registry/new-york/ui/button\";\nimport { useTranslation } from \"@/registry/new-york/hooks/use-translation\";\n\nexport function AddButton(props: React.ComponentProps<\"button\">) {\n  const t = useTranslation();\n  return <Button {...props}>{t(\"button.add\", \"Add new\")}</Button>;\n}\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "meta": {
+    "tags": [
+      "button"
+    ],
+    "colSpan": 3
+  }
 }
