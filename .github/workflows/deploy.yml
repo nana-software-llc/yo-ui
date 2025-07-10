@@ -3,8 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
+  # pull_request:
+  #   branches: [main]
   workflow_dispatch: # Thêm trigger này để có thể chạy thủ công
 
 permissions:
@@ -38,16 +38,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build registry
-        run: pnpm run registry:build
-
       - name: Build static site
         env:
           NEXT_PUBLIC_BASE_URL: https://nana-software-llc.github.io/yo-ui
           NEXT_PUBLIC_BASE_PATH: /yo-ui
-        run: |
-          pnpm run build
-          pnpm run registry:build
+        run: pnpm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
