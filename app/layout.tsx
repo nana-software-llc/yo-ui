@@ -27,7 +27,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SiteConfig.url),
+  metadataBase: new URL(SiteConfig.baseUrl),
   title: `${SiteConfig.name} - Beautiful UI components built with Tailwind CSS and React`,
   description:
     "An extensive collection of copy-and-paste components for quickly building app UIs. Free, open-source, and ready to drop into your projects.",
