@@ -12,6 +12,7 @@ export default function AddButton({
     tooltip?: string;
   }) {
   const t = useTranslation();
+
   if (tooltip) {
     return (
       <ButtonTooltipWrapper title={tooltip}>
@@ -21,6 +22,7 @@ export default function AddButton({
       </ButtonTooltipWrapper>
     );
   }
+
   return (
     <Button variant={variant} {...props}>
       {t("button.add", "Add new")}
