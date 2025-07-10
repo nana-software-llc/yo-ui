@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/new-york/hooks/use-translation.ts",
-      "content": "/**\n * Replace with your own translation function\n *\n * @param namespace\n * @returns\n */\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\nexport function useTranslation(namespace: string = \"translation\") {\n  return (\n    key: string,\n    options:\n      | {\n          defaultMessage: string;\n          [key: string]: string | number | undefined;\n        }\n      | string\n  ) => {\n    return typeof options === \"string\"\n      ? options\n      : options?.defaultMessage || key;\n  };\n}\n",
+      "content": "/**\n * Replace with your own translation function\n *\n * @param namespace\n * @returns\n */\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\nexport function useTranslation(namespace: string = \"translation\") {\n  return (\n    key: string,\n    options:\n      | {\n          defaultMessage: string;\n          [key: string]: string | number | undefined;\n        }\n      | string\n  ) => {\n    console.log(\n      \"Please replace useTranslation with your own translation function @/hooks/use-translation.ts\",\n      namespace\n    );\n    return typeof options === \"string\"\n      ? options\n      : options?.defaultMessage || key;\n  };\n}\n",
       "type": "registry:hook"
     }
   ]
