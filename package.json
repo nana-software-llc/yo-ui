@@ -8,8 +8,8 @@
     "clean": "rimraf .next out",
     "dev": "next dev --turbopack",
     "lint": "next lint",
-    "registry:build": "shadcn build && pnpm replace-urls",
-    "replace-urls": "node scripts/replace-urls.js",
+    "registry:build": "shadcn build && pnpm repair-build-registry",
+    "repair-build-registry": "node scripts/repair-build-registry.js",
     "sb": "storybook dev -p 6006",
     "start": "next start"
   },
