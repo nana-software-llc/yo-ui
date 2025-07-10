@@ -6,7 +6,8 @@
   "description": "A button that edits an item.",
   "registryDependencies": [
     "button",
-    "http://localhost:3000/r/use-translation.json"
+    "http://localhost:3000/r/use-translation.json",
+    "http://localhost:3000/r/button-tooltip-wrapper.json"
   ],
   "files": [
     {
@@ -17,8 +18,9 @@
   ],
   "meta": {
     "tags": [
-      "button"
+      "button",
+      "edit"
     ],
-    "colSpan": 3
+    "style": 2
   }
 }

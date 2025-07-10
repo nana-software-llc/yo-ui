@@ -135,6 +135,8 @@ export const registryTags = [
   "warning",
   "week",
   "zoom",
-] as const
+  "add",
+  "edit",
+] as const;
 
-export type RegistryTag = (typeof registryTags)[number]
+export type RegistryTag = (typeof registryTags)[number];

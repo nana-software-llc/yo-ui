@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-tooltip-wrapper",
+  "type": "registry:component",
+  "title": "Button Tooltip Wrapper",
+  "description": "A wrapper for a button that displays a tooltip.",
+  "registryDependencies": [
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/components/button-tooltip-wrapper.tsx",
+      "content": "import {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@/registry/new-york/ui/tooltip\";\n\nexport function ButtonTooltipWrapper({\n  children,\n  title,\n}: {\n  children: React.ReactNode;\n  title: string;\n}) {\n  return (\n    <Tooltip>\n      <TooltipTrigger asChild>{children}</TooltipTrigger>\n      <TooltipContent>\n        <p>{title}</p>\n      </TooltipContent>\n    </Tooltip>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}

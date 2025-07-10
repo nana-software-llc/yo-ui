@@ -1,19 +1,22 @@
 import { Button, buttonVariants } from "@/registry/new-york/ui/button";
 import { useTranslation } from "@/registry/new-york/hooks/use-translation";
 import { VariantProps } from "class-variance-authority";
-import { PencilIcon } from "lucide-react";
+import { PlusIcon } from "lucide-react";
 import { ButtonTooltipWrapper } from "./button-tooltip-wrapper";
+import { cn } from "@/lib/utils";
 
-export default function EditButtonIcon({
-  variant = "secondary",
+export default function AddButtonIcon({
+  variant = "default",
   size = "icon",
-  icon = <PencilIcon className="w-4 h-4" />,
+  rounded = true,
+  icon = <PlusIcon className="w-4 h-4" />,
   tooltip,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     tooltip?: string;
     icon?: React.ReactNode;
+    rounded?: boolean;
   }) {
   const t = useTranslation();
 
@@ -24,7 +27,8 @@ export default function EditButtonIcon({
           variant={variant}
           size={size}
           {...props}
-          title={t("button.edit", "Edit")}
+          title={t("button.add", "Add")}
+          className={cn(rounded && "rounded-full")}
         >
           {icon}
         </Button>
@@ -37,7 +41,8 @@ export default function EditButtonIcon({
       variant={variant}
       size={size}
       {...props}
-      title={t("button.edit", "Edit")}
+      title={t("button.add", "Add")}
+      className={cn(rounded && "rounded-full")}
     >
       {icon}
     </Button>

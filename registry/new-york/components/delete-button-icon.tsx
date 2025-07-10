@@ -1,13 +1,13 @@
 import { Button, buttonVariants } from "@/registry/new-york/ui/button";
 import { useTranslation } from "@/registry/new-york/hooks/use-translation";
 import { VariantProps } from "class-variance-authority";
-import { PencilIcon } from "lucide-react";
+import { TrashIcon } from "lucide-react";
 import { ButtonTooltipWrapper } from "./button-tooltip-wrapper";
 
-export default function EditButtonIcon({
-  variant = "secondary",
+export default function DeleteButtonIcon({
+  variant = "destructive",
   size = "icon",
-  icon = <PencilIcon className="w-4 h-4" />,
+  icon = <TrashIcon className="w-4 h-4" />,
   tooltip,
   ...props
 }: React.ComponentProps<"button"> &
@@ -24,7 +24,7 @@ export default function EditButtonIcon({
           variant={variant}
           size={size}
           {...props}
-          title={t("button.edit", "Edit")}
+          title={t("button.delete", "Delete")}
         >
           {icon}
         </Button>
@@ -37,7 +37,7 @@ export default function EditButtonIcon({
       variant={variant}
       size={size}
       {...props}
-      title={t("button.edit", "Edit")}
+      title={t("button.delete", "Delete")}
     >
       {icon}
     </Button>

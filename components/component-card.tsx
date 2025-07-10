@@ -38,6 +38,8 @@ export default function ComponentCard({
       ? "text-center"
       : "";
 
+  console.log(cn(getColSpanClasses()), "xxxx", component.meta?.colSpan);
+
   return (
     <div
       className={cn(
