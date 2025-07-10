@@ -19,9 +19,9 @@ import { SiteConfig } from "@/config/site";
 import GithubIcon from "./icons/github-icon";
 
 const links = [
-  { text: "Layouts", href: "/layouts", isNew: true },
+  // { text: "Layouts", href: "/layouts", isNew: true },
   // { text: "Colors", href: "/colors" },
-  { text: "Easing Classes", href: "/easings" },
+  { text: "Easing Classes", href: "/easings", isNew: false },
 ];
 
 export default function Header() {

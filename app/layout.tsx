@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Outfit as FontHeading, Inter as FontSans } from "next/font/google";
-import Script from "next/script";
 
 import Footer from "@/components/footer";
 import Header from "@/components/header";
