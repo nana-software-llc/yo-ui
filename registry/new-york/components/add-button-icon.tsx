@@ -8,7 +8,6 @@ import { cn } from "@/lib/utils";
 export default function AddButtonIcon({
   variant = "default",
   size = "icon",
-  rounded = true,
   icon = <PlusIcon className="w-4 h-4" />,
   tooltip,
   ...props
@@ -23,13 +22,7 @@ export default function AddButtonIcon({
   if (tooltip) {
     return (
       <ButtonTooltipWrapper title={tooltip}>
-        <Button
-          variant={variant}
-          size={size}
-          {...props}
-          title={t("button.add", "Add")}
-          className={cn(rounded && "rounded-full")}
-        >
+        <Button variant={variant} size={size} {...props}>
           {icon}
         </Button>
       </ButtonTooltipWrapper>
@@ -37,13 +30,7 @@ export default function AddButtonIcon({
   }
 
   return (
-    <Button
-      variant={variant}
-      size={size}
-      {...props}
-      title={t("button.add", "Add")}
-      className={cn(rounded && "rounded-full")}
-    >
+    <Button variant={variant} size={size} {...props}>
       {icon}
     </Button>
   );

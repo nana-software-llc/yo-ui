@@ -22,11 +22,11 @@ export default function Page() {
       <div className="relative my-16">
         <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {categories
-            .sort((a, b) => a.name.localeCompare(b.name))
             .sort((a, b) => {
               if (a.isNew && !b.isNew) return -1;
               if (!a.isNew && b.isNew) return 1;
-              return 0;
+
+              return a.name.localeCompare(b.name);
             })
             .map((category) => (
               <CategoryCard

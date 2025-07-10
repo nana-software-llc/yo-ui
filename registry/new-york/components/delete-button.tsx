@@ -6,6 +6,7 @@ import { ButtonTooltipWrapper } from "./button-tooltip-wrapper";
 export default function DeleteButton({
   variant = "destructive",
   tooltip,
+  children,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
@@ -17,7 +18,7 @@ export default function DeleteButton({
     return (
       <ButtonTooltipWrapper title={tooltip}>
         <Button variant={variant} {...props}>
-          {t("button.delete", "Delete")}
+          {children || t("button.delete", "Delete")}
         </Button>
       </ButtonTooltipWrapper>
     );
@@ -25,7 +26,7 @@ export default function DeleteButton({
 
   return (
     <Button variant={variant} {...props}>
-      {t("button.delete", "Delete")}
+      {children || t("button.delete", "Delete")}
     </Button>
   );
 }
