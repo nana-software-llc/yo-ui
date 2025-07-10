@@ -55,7 +55,7 @@ function CategoryCard({
   isNew = false,
 }: CategoryCardProps) {
   const href = `/${slug}`;
-  const imageBasePath = `/thumbs/${slug}`;
+  const imageBasePath = `${process.env.NEXT_PUBLIC_BASE_PATH}/thumbs/${slug}`;
   const alt = `${name} components`;
   const isComingSoon = componentsCount === undefined;
 
