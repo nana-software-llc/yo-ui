@@ -11,7 +11,7 @@
   "files": [
     {
       "path": "registry/new-york/components/add-button.tsx",
-      "content": "import { Button } from \"@/registry/new-york/ui/button\";\nimport { useTranslation } from \"@/registry/new-york/hooks/use-translation\";\n\nexport default function AddButton(props: React.ComponentProps<\"button\">) {\n  const t = useTranslation();\n  return <Button {...props}>{t(\"button.add\", \"Add new\")}</Button>;\n}\n",
+      "content": "import { Button, buttonVariants } from \"@/registry/new-york/ui/button\";\nimport { useTranslation } from \"@/registry/new-york/hooks/use-translation\";\nimport { VariantProps } from \"class-variance-authority\";\nimport { ButtonTooltipWrapper } from \"./button-tooltip-wrapper\";\n\nexport function AddButton({\n  variant = \"default\",\n  tooltip,\n  ...props\n}: React.ComponentProps<\"button\"> &\n  VariantProps<typeof buttonVariants> & {\n    tooltip?: string;\n  }) {\n  const t = useTranslation();\n  if (tooltip) {\n    return (\n      <ButtonTooltipWrapper title={tooltip}>\n        <Button variant={variant} {...props}>\n          {t(\"button.add\", \"Add new\")}\n        </Button>\n      </ButtonTooltipWrapper>\n    );\n  }\n  return (\n    <Button variant={variant} {...props}>\n      {t(\"button.add\", \"Add new\")}\n    </Button>\n  );\n}\n",
       "type": "registry:component"
     }
   ],

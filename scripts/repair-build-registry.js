@@ -3,13 +3,21 @@ const path = require("path");
 
 const PUBLIC_R_DIR = path.join(__dirname, "../public/r");
 
-function replaceUrlsInFile(filePath) {
+function repairContentInFile(
+  filePath,
+  { replaceExportDefault, replaceExportToObject }
+) {
   try {
     const content = fs.readFileSync(filePath, "utf8");
 
-    const updatedContent = content.replace(
+    let updatedContent = content.replace(
       /NEXT_PUBLIC_BASE_URL/g,
       process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"
+    );
+
+    updatedContent = updatedContent.replace(
+      replaceExportDefault,
+      replaceExportToObject
     );
 
     if (content !== updatedContent) {
@@ -31,10 +39,22 @@ function processDirectory(dirPath) {
       const filePath = path.join(dirPath, file);
       const stat = fs.statSync(filePath);
 
+      const fileName = path.basename(filePath, path.extname(filePath));
+      const className = fileName
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join("");
+
+      const replaceExportDefault = `export default function ${className}(`;
+      const replaceExportToObject = `export function ${className}(`;
+
       if (stat.isDirectory()) {
         processDirectory(filePath);
       } else if (file.endsWith(".json")) {
-        replaceUrlsInFile(filePath);
+        repairContentInFile(filePath, {
+          replaceExportDefault,
+          replaceExportToObject,
+        });
       }
     });
   } catch (error) {

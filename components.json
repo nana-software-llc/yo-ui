@@ -11,11 +11,11 @@
     "prefix": ""
   },
   "aliases": {
-    "components": "@/components",
-    "utils": "@/lib/utils",
-    "ui": "@/components/ui",
-    "lib": "@/lib",
-    "hooks": "@/hooks"
+    "components": "@/registry/new-york/components",
+    "utils": "@/registry/new-york/lib/utils",
+    "ui": "@/registry/new-york",
+    "lib": "@/registry/new-york/lib",
+    "hooks": "@/registry/new-york/hooks"
   },
   "iconLibrary": "lucide"
 }

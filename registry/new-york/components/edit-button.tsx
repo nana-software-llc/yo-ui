@@ -3,8 +3,8 @@ import { useTranslation } from "@/registry/new-york/hooks/use-translation";
 import { VariantProps } from "class-variance-authority";
 import { ButtonTooltipWrapper } from "./button-tooltip-wrapper";
 
-export default function AddButton({
-  variant = "default",
+export default function EditButton({
+  variant = "secondary",
   tooltip,
   ...props
 }: React.ComponentProps<"button"> &
@@ -17,7 +17,7 @@ export default function AddButton({
     return (
       <ButtonTooltipWrapper title={tooltip}>
         <Button variant={variant} {...props}>
-          {t("button.add", "Add new")}
+          {t("button.edit", "Edit")}
         </Button>
       </ButtonTooltipWrapper>
     );
@@ -25,7 +25,7 @@ export default function AddButton({
 
   return (
     <Button variant={variant} {...props}>
-      {t("button.add", "Add new")}
+      {t("button.edit", "Edit")}
     </Button>
   );
 }
