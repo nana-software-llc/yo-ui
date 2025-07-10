@@ -38,9 +38,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build registry
-        run: pnpm run registry:build
-
       - name: Build static site
         env:
           NEXT_PUBLIC_BASE_URL: https://nana-software-llc.github.io/yo-ui
