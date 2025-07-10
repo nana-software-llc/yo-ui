@@ -25,6 +25,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/registry/new-york/ui/tooltip";
+import { SiteConfig } from "@/config/site";
 
 export default function ComponentDetails({
   component,
@@ -74,9 +75,9 @@ export default function ComponentDetails({
 
   return (
     <div className="absolute top-2 right-2 flex gap-1 peer-data-comp-loading:hidden">
-      <CopyRegistry url={`https://originui.com/r/${component.name}.json`} />
+      <CopyRegistry url={`${SiteConfig.baseUrl}/r/${component.name}.json`} />
       <OpenInV0
-        componentSource={`https://originui.com/r/${component.name}.json`}
+        componentSource={`${SiteConfig.baseUrl}/r/${component.name}.json`}
       />
       <Dialog>
         <TooltipProvider delayDuration={0}>
@@ -94,7 +95,7 @@ export default function ComponentDetails({
                 </DialogTrigger>
               </span>
             </TooltipTrigger>
-            <TooltipContent className="text-muted-foreground px-2 py-1 text-xs">
+            <TooltipContent className="px-2 py-1 text-xs">
               View code
             </TooltipContent>
           </Tooltip>
@@ -115,7 +116,7 @@ export default function ComponentDetails({
                   <p className="text-muted-foreground text-sm">
                     No code available. If you think this is an error, please{" "}
                     <a
-                      href="https://github.com/origin-space/originui/issues"
+                      href={`${SiteConfig.githubUrl}/issues`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-foreground font-medium underline hover:no-underline"
