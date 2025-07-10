@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { categories } from "@/config/components";
 import SearchButton from "@/components/search-button";
+import { SiteConfig } from "@/config/site";
 
 export default function Page() {
   return (
@@ -55,7 +56,7 @@ function CategoryCard({
   isNew = false,
 }: CategoryCardProps) {
   const href = `/${slug}`;
-  const imageBasePath = `${process.env.NEXT_PUBLIC_BASE_PATH}/thumbs/${slug}`;
+  const imageBasePath = `${SiteConfig.baseUrl}/thumbs/${slug}`;
   const alt = `${name} components`;
   const isComingSoon = componentsCount === undefined;
 

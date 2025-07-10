@@ -46,7 +46,7 @@ export default function ComponentDetails({
     const loadCode = async () => {
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BASE_PATH}/r/${component.name}.json`
+          `${SiteConfig.baseUrl}/r/${component.name}.json`
         );
         if (!response.ok) {
           handleEmptyCode();

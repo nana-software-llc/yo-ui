@@ -8,12 +8,13 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/registry/new-york/ui/tabs";
+import { SiteConfig } from "@/config/site";
 
 export default function CliCommands({ name }: { name: string }) {
   const [config, setConfig] = useConfig();
   const packageManager = config.packageManager || "pnpm";
 
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || window.location.origin;
+  const basePath = SiteConfig.baseUrl || window.location.origin;
 
   const commands = {
     pnpm: `pnpm dlx shadcn@latest add ${basePath}/r/${name}.json`,
