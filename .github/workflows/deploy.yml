@@ -42,9 +42,7 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_URL: https://nana-software-llc.github.io/yo-ui
           NEXT_PUBLIC_BASE_PATH: /yo-ui
-        run: |
-          pnpm run build
-          pnpm run registry:build
+        run: pnpm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
