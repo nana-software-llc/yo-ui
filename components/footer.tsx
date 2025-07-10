@@ -12,7 +12,11 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} {SiteConfig.name}
         </p>
         <p className="text-muted-foreground text-sm">
-          A project by {SiteConfig.company}.
+          A project by {SiteConfig.company} inspired by{" "}
+          <a href="https://originui.com" target="_blank">
+            Origin UI
+          </a>
+          .
         </p>
       </div>
     </footer>

@@ -465,7 +465,7 @@ const MultipleSelector = ({
               <div
                 key={option.value}
                 className={cn(
-                  "animate-fadeIn bg-background text-secondary-foreground hover:bg-background relative inline-flex h-7 cursor-default items-center rounded-md border ps-2 pe-7 pl-2 text-xs font-medium transition-all disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 data-fixed:pe-2 dark:border-zinc-700 dark:bg-zinc-700/50",
+                  "animate-fadeIn bg-background hover:bg-background relative inline-flex h-7 cursor-default items-center rounded-md border ps-2 pe-7 pl-2 text-xs font-medium transition-all disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 data-fixed:pe-2 dark:border-zinc-700 dark:bg-zinc-700/50",
                   badgeClassName
                 )}
                 data-fixed={option.fixed}
@@ -613,7 +613,6 @@ const MultipleSelector = ({
                                 inputRef.current?.blur();
                               }}
                               className={cn(
-                                "cursor-pointer rounded-none px-4 py-2 data-[selected=true]:bg-zinc-50 dark:data-[selected=true]:bg-zinc-800/50",
                                 option.disable &&
                                   "pointer-events-none cursor-not-allowed opacity-50"
                               )}
