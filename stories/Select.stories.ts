@@ -22,7 +22,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Default  : Story = {
+export const Default: Story = {
   args: {
     options: [
       {
@@ -35,6 +35,46 @@ export const Default  : Story = {
       },
     ],
     value: "1",
+    placeholder: 'Select an option',
+    onChange: fn(),
+    label: 'Select Class',
+    labelInValue: false,
+  },
+};
+
+export const SelectWithRequestApi: Story = {
+  args: {
+    request: async (keyword: string) => {
+      return [
+        {
+          value: '1',
+          label: 'Class 1',
+        },
+        {
+          value: '2',
+          label: 'Class 2',
+        },
+        {
+          value: '3',
+          label: 'Class 3',
+        },
+        {
+          value: '4',
+          label: 'Class 4',
+        },
+        {
+          value: '5',
+          label: 'Class 5',
+        },
+      ].filter((item) => item.label.toLowerCase().includes(keyword.toLowerCase()))
+    },
+    options: [
+      {
+        value: '2',
+        label: 'Class 2',
+      },
+    ],
+    value: "2",
     placeholder: 'Select an option',
     onChange: fn(),
     label: 'Select Class',
