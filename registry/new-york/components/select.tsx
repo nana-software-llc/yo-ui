@@ -174,7 +174,6 @@ export function Select<T = string>({ options: optionsProp, placeholder, value: v
                     onSelect={(currentValue) => {
                       setOpen(false)
                       if (labelInValue) {
-                        console.log('labelInValue', labelInValue, option, 'newValue1')
                         setValue({
                           label: option.label,
                           value: option.value
