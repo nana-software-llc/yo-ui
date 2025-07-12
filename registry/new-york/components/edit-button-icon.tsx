@@ -19,7 +19,7 @@ export default function EditButtonIcon({
 
   if (tooltip) {
     return (
-      <ButtonTooltipWrapper title={tooltip}>
+      <ButtonTooltipWrapper title={tooltip || t("button.edit", "Edit")}>
         <Button variant={variant} size={size} {...props}>
           {icon}
         </Button>

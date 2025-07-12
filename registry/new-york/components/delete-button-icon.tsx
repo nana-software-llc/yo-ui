@@ -19,7 +19,7 @@ export default function DeleteButtonIcon({
 
   if (tooltip) {
     return (
-      <ButtonTooltipWrapper title={tooltip}>
+      <ButtonTooltipWrapper title={tooltip || t("button.delete", "Delete")}>
         <Button variant={variant} size={size} {...props}>
           {icon}
         </Button>

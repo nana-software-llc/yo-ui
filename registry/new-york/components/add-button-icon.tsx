@@ -3,7 +3,6 @@ import { useTranslation } from "@/registry/new-york/hooks/use-translation";
 import { VariantProps } from "class-variance-authority";
 import { PlusIcon } from "lucide-react";
 import { ButtonTooltipWrapper } from "./button-tooltip-wrapper";
-import { cn } from "@/lib/utils";
 
 export default function AddButtonIcon({
   variant = "default",
@@ -21,7 +20,7 @@ export default function AddButtonIcon({
 
   if (tooltip) {
     return (
-      <ButtonTooltipWrapper title={tooltip}>
+      <ButtonTooltipWrapper title={tooltip || t("button.add", "Add")}>
         <Button variant={variant} size={size} {...props}>
           {icon}
         </Button>
