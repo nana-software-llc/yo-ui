@@ -83,7 +83,8 @@
       "description": "A button that adds a new item.",
       "registryDependencies": [
         "button",
-        "NEXT_PUBLIC_BASE_URL/r/use-translation.json"
+        "NEXT_PUBLIC_BASE_URL/r/use-translation.json",
+        "NEXT_PUBLIC_BASE_URL/r/button-tooltip-wrapper.json"
       ],
       "files": [
         {
@@ -92,8 +93,8 @@
         }
       ],
       "meta": {
-        "tags": ["button"],
-        "colSpan": 3
+        "tags": ["button", "add"],
+        "style": 2
       }
     },
     {
@@ -103,7 +104,8 @@
       "description": "A button that edits an item.",
       "registryDependencies": [
         "button",
-        "NEXT_PUBLIC_BASE_URL/r/use-translation.json"
+        "NEXT_PUBLIC_BASE_URL/r/use-translation.json",
+        "NEXT_PUBLIC_BASE_URL/r/button-tooltip-wrapper.json"
       ],
       "files": [
         {
@@ -112,8 +114,8 @@
         }
       ],
       "meta": {
-        "tags": ["button"],
-        "colSpan": 3
+        "tags": ["button", "edit"],
+        "style": 2
       }
     },
     {
@@ -123,7 +125,8 @@
       "description": "A button that deletes an item.",
       "registryDependencies": [
         "button",
-        "NEXT_PUBLIC_BASE_URL/r/use-translation.json"
+        "NEXT_PUBLIC_BASE_URL/r/use-translation.json",
+        "NEXT_PUBLIC_BASE_URL/r/button-tooltip-wrapper.json"
       ],
       "files": [
         {
@@ -132,8 +135,8 @@
         }
       ],
       "meta": {
-        "tags": ["button"],
-        "colSpan": 3
+        "tags": ["button", "delete"],
+        "style": 2
       }
     },
     {
@@ -143,7 +146,8 @@
       "description": "A button that edits an item with an icon.",
       "registryDependencies": [
         "button",
-        "NEXT_PUBLIC_BASE_URL/r/use-translation.json"
+        "NEXT_PUBLIC_BASE_URL/r/use-translation.json",
+        "NEXT_PUBLIC_BASE_URL/r/button-tooltip-wrapper.json"
       ],
       "files": [
         {
@@ -152,9 +156,64 @@
         }
       ],
       "meta": {
-        "tags": ["button"],
-        "colSpan": 3
+        "tags": ["button", "edit"],
+        "style": 2
       }
+    },
+    {
+      "name": "delete-button-icon",
+      "type": "registry:component",
+      "title": "Delete Button Icon",
+      "description": "A button that deletes an item with an icon.",
+      "registryDependencies": [
+        "button",
+        "NEXT_PUBLIC_BASE_URL/r/use-translation.json",
+        "NEXT_PUBLIC_BASE_URL/r/button-tooltip-wrapper.json"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/components/delete-button-icon.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["button", "delete"],
+        "style": 2
+      }
+    },
+    {
+      "name": "add-button-icon",
+      "type": "registry:component",
+      "title": "Add Button Icon",
+      "description": "A button that adds an item with an icon.",
+      "registryDependencies": [
+        "button",
+        "NEXT_PUBLIC_BASE_URL/r/use-translation.json",
+        "NEXT_PUBLIC_BASE_URL/r/button-tooltip-wrapper.json"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/components/add-button-icon.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["button", "add"],
+        "style": 2
+      }
+    },
+    {
+      "name": "button-tooltip-wrapper",
+      "type": "registry:component",
+      "title": "Button Tooltip Wrapper",
+      "description": "A wrapper for a button that displays a tooltip.",
+      "registryDependencies": ["tooltip"],
+      "files": [
+        {
+          "path": "registry/new-york/components/button-tooltip-wrapper.tsx",
+          "type": "registry:component"
+        }
+      ]
     },
     {
       "name": "use-translation",

@@ -6,6 +6,7 @@ import { ButtonTooltipWrapper } from "./button-tooltip-wrapper";
 export default function EditButton({
   variant = "secondary",
   tooltip,
+  children,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
@@ -17,7 +18,7 @@ export default function EditButton({
     return (
       <ButtonTooltipWrapper title={tooltip}>
         <Button variant={variant} {...props}>
-          {t("button.edit", "Edit")}
+          {children || t("button.edit", "Edit")}
         </Button>
       </ButtonTooltipWrapper>
     );
@@ -25,7 +26,7 @@ export default function EditButton({
 
   return (
     <Button variant={variant} {...props}>
-      {t("button.edit", "Edit")}
+      {children || t("button.edit", "Edit")}
     </Button>
   );
 }

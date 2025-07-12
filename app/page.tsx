@@ -25,7 +25,8 @@ export default function Page() {
             .sort((a, b) => {
               if (a.isNew && !b.isNew) return -1;
               if (!a.isNew && b.isNew) return 1;
-              return 0;
+
+              return a.name.localeCompare(b.name);
             })
             .map((category) => (
               <CategoryCard

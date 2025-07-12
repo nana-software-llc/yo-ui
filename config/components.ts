@@ -9,7 +9,14 @@ export const categories: ComponentCategory[] = [
   {
     slug: "button",
     name: "Button",
-    components: [{ name: "add-button" }],
+    components: [
+      { name: "add-button-icon" },
+      { name: "add-button" },
+      { name: "delete-button-icon" },
+      { name: "delete-button" },
+      { name: "edit-button-icon" },
+      { name: "edit-button" },
+    ],
   },
 ];
 

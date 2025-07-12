@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "delete-button-icon",
+  "type": "registry:component",
+  "title": "Delete Button Icon",
+  "description": "A button that deletes an item with an icon.",
+  "registryDependencies": [
+    "button",
+    "http://localhost:3000/r/use-translation.json",
+    "http://localhost:3000/r/button-tooltip-wrapper.json"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/components/delete-button-icon.tsx",
+      "content": "import { Button, buttonVariants } from \"@/registry/new-york/ui/button\";\nimport { useTranslation } from \"@/registry/new-york/hooks/use-translation\";\nimport { VariantProps } from \"class-variance-authority\";\nimport { TrashIcon } from \"lucide-react\";\nimport { ButtonTooltipWrapper } from \"./button-tooltip-wrapper\";\n\nexport function DeleteButtonIcon({\n  variant = \"destructive\",\n  size = \"icon\",\n  icon = <TrashIcon className=\"w-4 h-4\" />,\n  tooltip,\n  ...props\n}: React.ComponentProps<\"button\"> &\n  VariantProps<typeof buttonVariants> & {\n    tooltip?: string;\n    icon?: React.ReactNode;\n  }) {\n  const t = useTranslation();\n\n  if (tooltip) {\n    return (\n      <ButtonTooltipWrapper title={tooltip || t(\"button.delete\", \"Delete\")}>\n        <Button variant={variant} size={size} {...props}>\n          {icon}\n        </Button>\n      </ButtonTooltipWrapper>\n    );\n  }\n\n  return (\n    <Button variant={variant} size={size} {...props}>\n      {icon}\n    </Button>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "button",
+      "delete"
+    ],
+    "style": 2
+  }
+}
